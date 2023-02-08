@@ -1,0 +1,21 @@
+.descriptionBlock {
+	padding: 10px;
+}
+.descriptionBlock img {
+	height: 100px;
+	width: 100px;
+}
+.descriptionBlock span {
+	display: block;
+	padding-top: 10px;
+	font-weight: bold;
+	color: orange;
+}
+.preloader {
+	height: 50px;
+	width: 50px;
+}
+.picture img {
+	height: 300px;
+	width: 1000px;
+}
