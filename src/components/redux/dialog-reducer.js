@@ -16,7 +16,7 @@ let initialState = {
 		{ message: "Yo!" },
 	],
 
-	// newMessageBody: "",
+	newMessageBody: " ",
 };
 
 const dialogReducer = (state = initialState, action) => {
@@ -25,7 +25,7 @@ const dialogReducer = (state = initialState, action) => {
 		// 	return {
 		// 		...state,
 		// 		newMessageBody: action.body,
-		// 	};  
+		// 	};
 
 		case SEND_MASSAGE:
 			let body = action.newMessageBody;

@@ -10,7 +10,7 @@ const maxLength = maxLengthCreator(50);
 const AddMessageForm = (props) => {
 	return (
 		<form onSubmit={props.handleSubmit}>
-			<div>
+			<div className={s.form}>
 				<Field
 					component={Textarea}
 					name="newMessageBody"
@@ -20,7 +20,7 @@ const AddMessageForm = (props) => {
 				></Field>
 			</div>
 			<div>
-				<button>Add message</button>
+				<button className={s.shineButton}>Add message</button>
 			</div>
 		</form>
 	);

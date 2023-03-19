@@ -1,14 +1,15 @@
+import { Field } from "redux-form";
 import s from "./FormsControls.module.css";
 
-const FormControl = ({ input, meta, child, ...props }) => {
-	const hasError = meta.touched && meta.error;
+const FormControl = ({ input, meta: { touched, error }, children }) => {
+	const hasError = touched && error;
 	return (
 		<div className={s.formControl + " " + (hasError ? s.error : "")}>
 			<div>
 				{/* <textarea {...input} {...props} /> */}
-				{props.children}
+				{children}
 			</div>
-			{hasError && <span>{meta.error}</span>}{" "}
+			{hasError && <span>{error}</span>}{" "}
 			{/* эта штука отрисуется (СИНТАКСИС) когда выполнится И то условие И то  */}
 		</div>
 	);
@@ -31,3 +32,25 @@ export const Input = (props) => {
 		</FormControl>
 	);
 };
+
+export const createField = (
+	component,
+	validate,
+	name,
+	placeholder,
+	props = {},
+	text = "",
+
+) => (
+	<div>
+		<Field
+			component={component}
+			validate={validate}
+			name={name}
+			placeholder={placeholder}
+			{...props}
+			
+		/>
+		{text}
+	</div>
+);

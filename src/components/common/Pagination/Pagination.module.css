@@ -1,44 +1,32 @@
-.dialogs {
-	display: grid;
-	grid-template-columns: 300px 1px;
-	margin: 20px;
-	grid-template-areas:
-		"d m"
-		"t t ";
-	margin: 20px 50px;
-}
-.dialogsIems {
-	grid-area: d;
+.selectedPage {
+	font-weight: bold;
+	
 }
 
-.dialog.active {
-	color: gold;
+.paginator {
 }
-.messages {
-	grid-area: m;
-	margin-top: 10px;
+.pageNumber {
+	padding: 20px;
+	border: 1px solid grey;
 }
 
-.text {
-	margin: 20px 0;
-	width: 400px;
-	height: 100px;
-	grid-area: t;
-}
-/*  */
 
+/* .pageNumber.selectedPage {
+	font-weight: bold;
+	border-color: black;
+} */
 .shineButton {
 	background: rgba(255, 255, 255, 0.586);
 	text-decoration: none;
 	display: inline-block;
-	padding: 10px 30px;
-
+	padding: 5px 10px;
+	margin: 20px 10px;
 	position: relative;
 	overflow: hidden;
 	border: 2px solid #33977c18;
 	border-radius: 15px;
 	font-family: "Shantell Sans", cursive;
-
+	font-size: 1rem;
 	color: rgba(0, 0, 0);
 	transition: 0.2s ease-in-out;
 }
@@ -64,18 +52,4 @@
 .shineButton:hover:before {
 	left: 150px;
 	transition: 0.5s ease-in-out;
-}
-.dial {
-	color: rgb(0, 0, 0);
-}
-.form textarea {
-	background: rgba(255, 255, 255);
-	padding: 10px 10px;
-	margin: 10px 0px;
-	border: 2px solid #33977c18;
-	border-radius: 15px;
-	font-family: "Shantell Sans", cursive;
-	color: rgb(43, 164, 124);
-	/* width: 250px; */
-	resize: none;
 }

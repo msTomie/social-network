@@ -2,7 +2,7 @@
 	margin: 0 auto;
 	display: grid;
 	width: 1200px;
-	grid-template-rows: 60px 1fr;
+	grid-template-rows: 80px 1fr;
 	grid-template-columns: 2fr 10fr;
 	grid-template-areas:
 		"h h"
@@ -11,5 +11,9 @@
 
 .app-wrapper-content {
 	grid-area: c;
-	background-color: azure;
+	/* margin-top: 20px; */
+	/* background-color: #33977c0b; */
+}
+* {
+	font-family: "Shantell Sans", cursive;
 }

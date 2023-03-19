@@ -21,22 +21,22 @@ const Navbar = () => {
 					Dialogs
 				</NavLink>
 			</div>
-			<div>
+			{/* <div>
 				<NavLink
 					to="/News"
 					className={(navData) => (navData.isActive ? s.active : s.item)}
 				>
 					News
 				</NavLink>
-			</div>
-			<div>
+			</div> */}
+			{/* <div>
 				<NavLink
 					to="/Music"
 					className={(navData) => (navData.isActive ? s.active : s.item)}
 				>
 					Music
 				</NavLink>
-			</div>
+			</div> */}
 			<div>
 				<NavLink
 					to="/Users"

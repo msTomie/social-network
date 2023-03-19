@@ -12,9 +12,28 @@ import {
 import s from "./MyPosts.module.css";
 import Post from "./Post/Post";
 
-const MyPosts = (props) => {
+const maxLength = maxLengthCreator(10);
+const AddNewPostForm = (props) => {
+	return (
+		<form onSubmit={props.handleSubmit}>
+			<div>
+				<Field
+					component={Textarea}
+					validate={[required, maxLength]}
+					name="newPostText"
+					placeholder="Post message"
+				/>
+			</div>
+			<button className={s.shineButton}>Add post</button>
+		</form>
+	);
+}; /* форма */
+const AddNewPostFormRedux = reduxForm({ form: "postsAddNewPostFormRedux" })(
+	AddNewPostForm
+); /* контейнер-формы */
+const MyPosts = React.memo((props) => {
 	let postsElement = props.posts.map((p) => {
-		return <Post message={p.message} like={p.like} />;
+		return <Post key={p.id} message={p.message} like={p.like} />;
 	});
 
 	let newPostElement = React.createRef(); /* ссылка на textarea */
@@ -30,25 +49,5 @@ const MyPosts = (props) => {
 			<div className={s.posts}>{postsElement}</div>
 		</div>
 	);
-}; /* рендер */
-const maxLength = maxLengthCreator(10);
-const AddNewPostForm = (props) => {
-	return (
-		<form onSubmit={props.handleSubmit}>
-			<div>
-				<Field
-					placeholder="Post message"
-					component={Textarea}
-					name="newPostText"
-					validate={[required, maxLength]}
-				/>
-			</div>
-			<button>Add post</button>
-		</form>
-	);
-}; /* форма */
-const AddNewPostFormRedux = reduxForm({ form: "postsAddNewPostFormRedux" })(
-	AddNewPostForm
-); /* контейнер-формы */
-
+}); /* рендер */
 export default MyPosts;

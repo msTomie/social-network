@@ -1,12 +1,96 @@
 .formControl.error input,
 .formControl.error textarea {
-	border: solid red 2px;
+	border: solid rgba(255, 0, 0, 0.593) 2px;
+	font-family: "Shantell Sans", cursive;
+}
+
+[type="error"] {
+	background: rgba(255, 255, 255);
+	padding: 5px 10px;
+	margin: 10px 30px;
+	border: 2px solid #33977c18;
+	border-radius: 15px;
+	font-family: "Shantell Sans", cursive;
+	color: rgb(43, 164, 124);
+	width: 250px;
 }
 
 .formControl.error span {
-	color: red;
+	color: rgba(255, 0, 0, 0.593);
+	font-family: "Shantell Sans", cursive;
+	margin: 10px 30px;
 }
-.formSummaryError{
+.formSummaryError {
+	color: rgba(255, 0, 0, 0.593);
+	font-family: "Shantell Sans", cursive;
+	margin: 10px 30px;
+}
+/*  */
 
-	color: red;
+.shineButton {
+	background: rgba(255, 255, 255, 0.586);
+	text-decoration: none;
+	display: inline-block;
+	padding: 5px 10px;
+	margin: 10px 30px;
+	position: relative;
+	overflow: hidden;
+	border: 2px solid #33977c18;
+	border-radius: 15px;
+	font-family: "Shantell Sans", cursive;
+	font-size: 1rem;
+	color: rgba(0, 0, 0);
+	transition: 0.2s ease-in-out;
+}
+.shineButton:before {
+	content: "";
+	background: linear-gradient(
+		90deg,
+		rgba(255, 255, 255, 0.1),
+		rgba(255, 255, 255, 0.5)
+	);
+	height: 50px;
+	width: 50px;
+	position: absolute;
+	top: -8px;
+	left: -75px;
+	transform: skewX(-45deg);
+}
+
+.shineButton:hover {
+	background: #33977cbf;
+	color: #fff;
+}
+.shineButton:hover:before {
+	left: 150px;
+	transition: 0.5s ease-in-out;
+}
+/*  */
+[type="password"],
+[type="email"] {
+	background: rgba(255, 255, 255);
+	/* text-decoration: none; */
+	/* display: inline-block; */
+	padding: 5px 10px;
+	margin: 10px 30px;
+	/* position: relative; */
+	/* overflow: hidden; */
+	border: 2px solid #33977c18;
+	border-radius: 15px;
+	font-family: "Shantell Sans", cursive;
+	color: rgb(43, 164, 124);
+	/* transition: 0.2s ease-in-out; */
+	width: 250px;
+}
+.textLogin {
+	color: rgb(0, 0, 0);
+	font-family: "Shantell Sans", cursive;
+	padding: 5px 10px;
+	margin: 10px 30px;
+}
+.conteinerLogin {
+	background: #9ad4c50b;
+	padding-left: 30px;
+	padding-top: 5px;
+	height: 250px;
 }

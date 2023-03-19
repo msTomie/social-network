@@ -27,7 +27,8 @@ import {
 
 class UsersContainer extends React.Component {
 	componentDidMount() {
-		this.props.getUserrrs(this.props.currentPage, this.props.pageSize);
+		const { currentPage, pageSize } = this.props;
+		this.props.getUserrrs(currentPage, pageSize);
 		// this.props.toggleIsFetching(true);
 		// userAPI
 		// 	.getUsers(this.props.currentPage, this.props.pageSize)
@@ -38,7 +39,8 @@ class UsersContainer extends React.Component {
 		// 	});
 	}
 	onPageChange = (pageNumber) => {
-		this.props.getUserrrs(pageNumber, this.props.pageSize);
+		const { pageSize } = this.props;
+		this.props.getUserrrs(pageNumber, pageSize);
 	};
 	render() {
 		return (
@@ -122,6 +124,6 @@ export default compose(
 		setCurrentPage,
 		toggleFollowingProgress,
 		getUserrrs,
-	}),
-	withAuthRedirect
+	})
+	// withAuthRedirect
 )(UsersContainer);
